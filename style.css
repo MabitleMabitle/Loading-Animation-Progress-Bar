@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik Bubbles", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  inline-size: 100%;
+  block-size: 100vh;
+  background-color: #073b4c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bar-wrapper {
+  inline-size: 70rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.progress-bar-wrapper h3 {
+  font-size: 5rem;
+  color: #118ab2;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  text-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.3);
+  margin-block-end: 3rem;
+}
+
+.change .progress-bar-wrapper h3 {
+  animation: loadingAnimation 2s 5;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.progress-bar {
+  inline-size: 100%;
+  block-size: 3.5rem;
+  border: 0.2rem solid #06d6a0;
+  border-radius: 3rem;
+  padding: 0.3rem;
+  margin-block-end: 4rem;
+}
+
+.bar {
+  inline-size: 0;
+  block-size: 100%;
+  background: linear-gradient(to right, #ffd166, #ef476f);
+  border-radius: 3rem;
+}
+
+.change .bar {
+  animation: barAnimation 10s linear forwards;
+}
+
+@keyframes barAnimation {
+  0% {
+    inline-size: 0;
+  }
+  100% {
+    inline-size: 100%;
+  }
+}
+
+.buttons {
+  inline-size: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  inline-size: 35%;
+  block-size: 5.5rem;
+  border: none;
+  font-size: 1.8rem;
+  color: #fff;
+  letter-spacing: 0.1rem;
+  border-radius: 5rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.button:active {
+  transform: translateY(0.2rem);
+}
+
+.download {
+  background: linear-gradient(to right, #ef476f, #ffd166);
+}
+.reset {
+  background: linear-gradient(to right, #ffd166, #06d6a0);
+}
